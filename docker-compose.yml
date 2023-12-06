@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app:v1
+    container_name: hello-world
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app
+
